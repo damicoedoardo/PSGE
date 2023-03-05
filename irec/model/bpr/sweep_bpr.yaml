@@ -1,0 +1,19 @@
+method: grid
+metric:
+  goal: maximize
+  name: Recall@20
+parameters:
+  dataset:
+    values: ["Gowalla"]
+  wandb:
+    values: [True]
+  embedding_size:
+    values: [64]
+  learning_rate:
+    values: [1e-2, 1e-3, 1e-4]
+  l2_reg:
+    values: [0, 1e-3, 1e-5]
+  batch_size:
+    values: [2048]
+
+program: irec/model/bpr/train_bpr.py

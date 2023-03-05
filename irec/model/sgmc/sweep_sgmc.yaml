@@ -1,0 +1,13 @@
+method: grid
+metric:
+  goal: maximize
+  name: Recall@20
+parameters:
+  dataset:
+    values: ["Gowalla"]
+  wandb:
+    values: [True]
+  k:
+    values: [100, 300, 500, 800, 1000]
+
+program: irec/model/sgmc/train_sgmc.py
